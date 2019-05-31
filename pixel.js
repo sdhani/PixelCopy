@@ -1,13 +1,17 @@
 let changeColor = () => {
-    /*let table = document.getElementById('myTable');*/
-    let cells = document.getElementById('test');
-    console.log(cells);
+    let cells = document.getElementsByTagName("TD");
 
     for(let cell of cells){
-        alert("here");
-        let cellColor = cell.getAttribute('background-color');
-        cell.style.color = "red";
+        if(cell.addEventListener('mousedown',function(){
+            if(cell.addEventListener('mouseup',function(){
+                cell.style.backgroundColor = "red";
+
+            
+            }));
+        }));
+
     }
 }
 
 changeColor();
+
