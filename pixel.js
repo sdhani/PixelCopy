@@ -21,33 +21,22 @@ let allColor = (col) => {
 
 /* Table Expansion and Contraction Functions */
 
-/* add 1 column to the end of the table */
-let addColumn = () => {
-    let columns = document.getElementsByTagName('tr');
-    let addCol  = document.getElementById('addColumn');
+/* add 1 column at the end of the table */
+document.getElementById('addColumn').addEventListener('click', function(){
+  let rows = document.getElementsByTagName('tr');
+  for(let row of rows){
+    let newCol = document.createElement("td");
+    row.appendChild(newCol);
+  } 
+});
 
-    for(let row of columns){
-        addCol.addEventListener('click', function(){
-            let newCol = document.createElement("td");
-            row.appendChild(newCol);
-        });
-    }
-}
-
-/* remove 1 column to the end of the table */
-let removeColumn = () => {
-    let columns   = document.getElementsByTagName('tr');
-    let removeCol = document.getElementById('subtractColumn');
-    
-
-    for(let row of columns){
-        removeCol.addEventListener('click', function(){
-            row.removeChild(row.firstChild);
-            // let newCol = document.createElement("td");
-            // row.appendChild(newCol);
-        });
-    }
-}
+/* remove 1 column at the end of the table */
+document.getElementById('subtractColumn').addEventListener('click', function(){
+  let columns = document.getElementsByTagName('tr');
+  for(let row of columns){
+    row.removeChild(row.firstChild);
+  }
+});
 
 /* MAIN */
 
