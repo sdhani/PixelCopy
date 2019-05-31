@@ -36,7 +36,9 @@ let addRow = () =>
 
 let deleteRow = () =>
 {
-    
+    document.getElementById("myTable").deleteRow(0);
+
+
 }
 
 
