@@ -38,8 +38,6 @@ document.getElementById('subtractColumn').addEventListener('click', function(){
   }
 });
 
-/* MAIN */
-
 /* gather array of all cells */
 const cells     = document.getElementsByTagName("TD");
 let   myColor   = "Yellow"; /* need to get current color from dropdown */
