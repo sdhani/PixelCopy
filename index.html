@@ -1,55 +1,25 @@
-<!--
--->
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+  </head>
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" media="screen" href="index.css">
-        <script type="text/javascript" src="pixel.js"></script>
-    </head>
+  <body>
+    <div class="topnav"> 
+      <button id="addColumn">+ col</button>
+      <button id="deleteColumn">- col</button>  
+      <button id ="addRow">+ row</button>
+      <button id ="deleteRow">- row</button> 
+    </div>
 
-    <body>
-        <header>
-        </header>
-/*
-        <button onclick="addRow()"id = "addRow">R+</button>
-        <button  onclick="deleteRow()"id = "deleteRow">R-</button>
-        <table id="myTable">
-*/
-        <button id="addColumn">+ col</button>
-        <button id="subtractColumn">- col</button>     
+    <div id="outTable">
+      <table id="myTable">
+        <tr>
+        </tr>
+      </table>
+    </div>
 
-        <table id="myTable">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-/*
-            <!-- <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr> -->
-*/
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <!-- <tr><td id="test"></td><td></td><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr>
-            <tr><th><td></td></th><th><td></td></th><th><td></td></th></tr> -->
-        </table>
-        
-    </body>
+  <script type="text/javascript" src="pixel.js"></script>
+  </body>
 </html>
