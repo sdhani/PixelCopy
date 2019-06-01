@@ -2,20 +2,19 @@
  *  Table Manipulation Script
  */
 
-
 /* FUNCTIONS */
 
 /* Color Mod Functions */
 
 /* change color of cell based on input */
-let modColor = (loc,col) => {
-    loc.style.backgroundColor = col;
+let modColor = (loc,clr) => {
+    loc.style.backgroundColor = clr;
 }
 
 /* change color of all cells based on input */
-let allColor = (col) => {
+let allColor = (clr) => {
     for(let cell of cells){
-        modColor(cell,col);
+        modColor(cell,clr);
     }
 }
 
@@ -27,10 +26,11 @@ document.getElementById('addColumn').addEventListener('click', function(){
     for(let row of rows){
         let newCol = document.createElement("td");
         row.appendChild(newCol);
-    } 
+    }
+    //console.log(cells);
 });
 
-/* remove 1 column at the end of the table */
+/* remove 1 column at the front of the table */
 document.getElementById('subtractColumn').addEventListener('click', function(){
     let columns = document.getElementsByTagName('tr');
     for(let row of columns){
@@ -38,33 +38,38 @@ document.getElementById('subtractColumn').addEventListener('click', function(){
     }
 });
 
-/* add 1 row at the end of the table */
+/* add 1 row at front of the table */
 let addRow = () => {
-    let button = document.getElementById('addRow');
+    //let button = document.getElementById('addRow');
     let table = document.getElementById("myTable");
     let rows = Array.from(document.getElementsByTagName("TR"));
-    let p_prime = rows[0].cloneNode(true);
+    //let p_prime = rows[0].cloneNode(true);
     let newRow = document.createElement("tr");      
-    let newCell = document.createElement("td"); //inside the tr
+    //let newCell = document.createElement("td"); //inside the tr
             
     //goes up until the length of the rows
     for(let i =0; i < rows[0].childElementCount; i++){ 
         newRow.appendChild(document.createElement("td"));
     }
-    table.appendChild(newRow);     
+    table.appendChild(newRow);
+    //console.log(cells);
 }
 
-/* delete 1 row at the end of the table */
+/* delete 1 row at the front of the table */
 let deleteRow = () => {
     document.getElementById("myTable").deleteRow(0);
 }
 
 /* MAIN */
 
+let initCells = false;
+let myColor   = "Yellow"; /* need to get current color from dropdown */
+let isDrawing = false;
+let i = 0;
+
 /* gather array of all cells */
-const cells     = document.getElementsByTagName("TD");
-let   myColor   = "Yellow"; /* need to get current color from dropdown */
-let   isDrawing = false;
+const cells = document.getElementsByTagName("TD");
+console.log(cells);
 
 /**
  *  access each cell in array of cells
@@ -72,9 +77,11 @@ let   isDrawing = false;
  *  mousedown and mousemove
  * */
 for(let cell of cells){
-    
+
     cell.addEventListener('mousedown',event => {
         isDrawing = true;
+        console.log(cell);
+        console.log(cells.length);
         modColor(cell,"Purple");
     });
 
