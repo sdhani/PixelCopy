@@ -42,8 +42,7 @@ let beginDraw = () => {
 let colorCollector = () =>
 {
     myColor = document.getElementById("color").value;
-    //console.log(myColor);
-    //loc.style.backgroundColor = myColor;
+    
 }
 
 /* change color of cell based on input */
@@ -89,17 +88,15 @@ let initialFill = () => {
 
 /* Table Expansion and Contraction Functions */
 
+
 /* add 1 column at the end of the table */
 let addColumn = () => {
-//document.getElementById('addColumn').addEventListener('click', function(){
   let table = document.getElementById("myTable");  
   let rows = document.getElementsByTagName('tr');
   let newRow = document.createElement('tr');      
   
   if(rows[0] != undefined){
     for(let row of rows){
-      // let newCol = document.createElement('td');
-      // row.appendChild(newCol);
       row.insertCell(0);
       initialFill();
     } 
@@ -108,24 +105,22 @@ let addColumn = () => {
     table.appendChild(newRow);
     initialFill();
   }
-//});
+
 }
 
 /* remove 1 column at the end of the table */
 let deleteColumn = () => {
-//document.getElementById('deleteColumn').addEventListener('click', function(){
   let rows = Array.from(document.getElementsByTagName('tr'));  
   if(rows[0].childElementCount > 0){
     for(let row of rows){
       row.deleteCell(0);
     }
   }
-//});
+
 }
 
 /* add 1 row at the end of the table */
 let addRow = () => {
-//document.getElementById('addRow').addEventListener('click', function() {
   let table = document.getElementById("myTable");
   let rows = Array.from(document.getElementsByTagName('tr'));
   let newRow = document.createElement('tr');      
@@ -142,26 +137,25 @@ let addRow = () => {
     table.appendChild(newRow);
     initialFill();
   }
-//});
+
 }
 
 /* delete 1 row at the end of the table */
 let deleteRow = () => {
-//document.getElementById('deleteRow').addEventListener('click', function(){
   let rows = Array.from(document.getElementsByTagName('tr'));  
   let table = document.getElementById("myTable");
   
   if(rows[0] != undefined){
     table.deleteRow(0);
   }
-//});
+
 }
 
 
 /* MAIN */
 
 let initCells = false;
-let myColor   = "Red"; /* need to get current color from dropdown */
+let myColor; /* need to get current color from dropdown */
 let isDrawing = false;
 let i = 0;
 
