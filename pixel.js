@@ -6,6 +6,16 @@
 
 /* Drawing Functions */
 
+
+/*determine the current selected color from the dropdown menu and set the global variable of myColor to that value*/
+let colorCollector = () =>
+{
+    myColor = document.getElementById("color").value;
+    console.log(myColor);
+    //loc.style.backgroundColor = myColor;
+
+}
+
 /**
  *  access each cell in array of cells
  *  listen for mouse events, modify cell color property for 
@@ -18,7 +28,7 @@ let beginDraw = () => {
             isDrawing = true;
             console.log(cell);
             console.log(cells.length);
-            modColor(cell,"#ffcf40");
+            modColor(cell,"#ffcf40");  //light pink color
         });
 
         cell.addEventListener('mousemove',event => {
@@ -38,27 +48,27 @@ let beginDraw = () => {
 /* Color Mod Functions */
 
 /* change color of cell based on input */
-let modColor = (loc,clr) => {
-    loc.style.backgroundColor = clr;
+let modColor = (loc,myColor) => {
+    loc.style.backgroundColor = myColor;
 }
 
 /* helper to grab current color value */
 let allColorHelper = () => {
     //get current color
-    allColor("#adcfe6");
+    allColor("#adcfe6");       //light blue color
 }
 
 /* change color of all cells based on input */
-let allColor = (clr) => {
+let allColor = (myColor) => {
     for(let cell of cells){
-        modColor(cell,clr);
+        modColor(cell,myColor);
     }
 }
 
 /* helper to grab current color value */
 let remColorHelper = () => {
     //get current color
-    remColor("#FFC0CB");
+    remColor("#FFC0CB");    //light pink 
 }
 
 /* change color of all cells based on input */
@@ -122,7 +132,8 @@ let deleteRow = () => {
 
 let initCells = false;
 let initColor = false;
-let myColor   = "Yellow"; /* need to get current color from dropdown */
+let myColor; //updated each time colorCollector runs
+//let myColor   = document.getElementById("color"); /* need to get current color from dropdown */  //changed this from "Yellow"
 let isDrawing = false;
 let i = 0;
 
@@ -140,3 +151,10 @@ if(false === initColor){
 document.onmousemove = function(){
     beginDraw();
 };
+
+
+
+
+
+
+
