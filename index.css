@@ -1,5 +1,4 @@
 td {
-    /*background-color: blue;*/
     width: 40px;
     height: 40px;
     margin: 0;
@@ -13,7 +12,7 @@ td {
 button {
     font-family: 'Dosis', sans-serif;
     display: inline-block;
-    color: #2f990f;
+    color: #920c71;
     text-align: center;
     padding: 14px 16px;
     max-width: 100%;
@@ -27,21 +26,24 @@ button {
 
 /* Change the color of links on hover */
 button:hover {
-    background-color: rgb(195, 182, 212);
+    background-color: rgb(206, 206, 206);
     color: black;
-} */
+} 
 
+#buttonContainer {
+    margin: 50px;
+}
 #outTable {
-    text-align: center;
+    /* text-align: center; */
+    display: inline-flexbox;
 }
 
 #myTable {
     display: inline-block;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.582);
 }
 
 body {
-    /* background-color: darkblue; */
-    background-color: #51ff00;
-
+    text-align: center;
+    background-image: url("mazeWhite.png");
 }
