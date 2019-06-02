@@ -4,7 +4,7 @@
 <p>This is an exercise to further demonstrate an understanding of HTML, CSS, JS, 
 DOM manipulation, and handling user events by recreating a pixel art editor.</p>
 
-<p>View Project Live: <a hef="https://sdhani.github.io/PixelCopy/index.html">Pixel Art Editor</a></p>
+<p><strong>View Project Live: <a href="https://sdhani.github.io/PixelCopy/index.html">Pixel Art Editor</a></strong></p>
 
 <p>Collaboration: <a href="https://github.com/sdhani">Shania Dhani</a>, 
                  <a href="https://github.com/LawrenceCastillo">Lawrence Castillo</a>, 
