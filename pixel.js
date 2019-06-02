@@ -158,50 +158,6 @@ let deleteRow = () => {
 //});
 }
 
-<<<<<<< HEAD
-/* Drawing Functions */
-
-
-/*determine the current selected color from the dropdown menu and set the global variable of myColor to that value*/
-let colorCollector = () =>
-{
-    myColor = document.getElementById("color").value;
-    console.log(myColor);
-    //loc.style.backgroundColor = myColor;
-
-}
-
-/**
- *  access each cell in array of cells
- *  listen for mouse events, modify cell color property for 
- *  mousedown and mousemove
- * */
-let beginDraw = () => {
-  for(let cell of cells){
-    cell.addEventListener('mousedown',event => {
-      isDrawing = true;
-      console.log(cell);
-      console.log(cells.length);
-      modColor(cell,"#ffcf40");
-    });
-
-    cell.addEventListener('mousemove',event => {
-      if(isDrawing){
-        modColor(cell,"#ffcf40");
-      }
-    });
-
-    cell.addEventListener('mouseup',event => {
-      if(isDrawing){
-        isDrawing = false;
-      }
-    });
-
-    const allCells = document.getElementsByTagName('td');
-  }
-} 
-=======
->>>>>>> 651c54aeb3b0718a1546c8914acffb27085b211b
 
 /* MAIN */
 
@@ -216,10 +172,5 @@ console.log(cells);
 
 /* listen for mouse event */
 document.onmousemove = function(){
-<<<<<<< HEAD
-  beginDraw();
-};
-=======
     beginDraw();
 };
->>>>>>> 651c54aeb3b0718a1546c8914acffb27085b211b
