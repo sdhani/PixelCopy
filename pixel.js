@@ -5,10 +5,14 @@
 
 /* MAIN */
 
+let initCells = false;
+let myColor   = "Yellow"; /* need to get current color from dropdown */
+let isDrawing = false;
+let i = 0;
+
 /* gather array of all cells */
-const cells     = document.getElementsByTagName("TD");
-let   myColor   = "Yellow"; /* need to get current color from dropdown */
-let   isDrawing = false;
+const cells = document.getElementsByTagName("TD");
+console.log(cells);
 
 /*
  *  access each cell in array of cells
