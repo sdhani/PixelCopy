@@ -31,7 +31,7 @@ let remColorHelper = () => {
 }
 
 /* change color of all cells based on input */
-let remColor = (clr) => {
+let remColor = (clr,def) => {
     for(let cell of cells){
         if(cell.style.backgroundColor == "gainsboro"){
             console.log("true");
@@ -49,8 +49,8 @@ let addColumn = () => {
         for(let row of rows){
             let newCol = document.createElement("td");
             row.appendChild(newCol);
+            modColor(newCol,"gainsboro");
         }
-        //console.log(cells);
     //});
 }
 
@@ -76,6 +76,7 @@ let addRow = () => {
     //goes up until the length of the rows
     for(let i =0; i < rows[0].childElementCount; i++){ 
         newRow.appendChild(document.createElement("td"));
+        modColor(newRow,"gainsboro");
     }
     table.appendChild(newRow);
     //console.log(cells);
