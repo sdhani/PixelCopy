@@ -11,18 +11,20 @@
  *  mousedown and mousemove
  * */
 let beginDraw = () => {
+    colorCollector();
+
     for(let cell of cells){
 
         cell.addEventListener('mousedown',event => {
             isDrawing = true;
             console.log(cell);
             console.log(cells.length);
-            modColor(cell,"#ffcf40");
+            modColor(cell,myColor);
         });
 
         cell.addEventListener('mousemove',event => {
             if(isDrawing){
-                modColor(cell,"#ffcf40");
+                modColor(cell,myColor);
             }
         });
 
@@ -36,6 +38,14 @@ let beginDraw = () => {
 
 /* Color Mod Functions */
 
+/* set myColor to the current selected color from the dropdown menu */
+let colorCollector = () =>
+{
+    myColor = document.getElementById("color").value;
+    //console.log(myColor);
+    //loc.style.backgroundColor = myColor;
+}
+
 /* change color of cell based on input */
 let modColor = (loc,clr) => {
     loc.style.backgroundColor = clr;
@@ -44,7 +54,7 @@ let modColor = (loc,clr) => {
 /* helper to grab current color value */
 let allColorHelper = () => {
     //get current color
-    allColor("#adcfe6");
+    allColor(myColor);
 }
 
 /* change color of all cells based on input */
@@ -57,7 +67,7 @@ let allColor = (clr) => {
 /* helper to grab current color value */
 let remColorHelper = () => {
     //get current color
-    remColor("#FFC0CB");
+    remColor(myColor);
 }
 
 /* change color of all cells based on input */
@@ -151,7 +161,7 @@ let deleteRow = () => {
 /* MAIN */
 
 let initCells = false;
-let myColor   = "Yellow"; /* need to get current color from dropdown */
+let myColor   = "Red"; /* need to get current color from dropdown */
 let isDrawing = false;
 let i = 0;
 
