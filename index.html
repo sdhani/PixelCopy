@@ -7,11 +7,20 @@
 
   <body>
     <div class="topnav"> 
-      <button id="addColumn">+ col</button>
-      <button id="deleteColumn">- col</button>  
-      <button id ="addRow">+ row</button>
-      <button id ="deleteRow">- row</button> 
+   
     </div>
+    
+    <h1>Column</h1> <br>
+    <button id="addColumn">+ col</button>
+    <button id="deleteColumn">- col</button> 
+    <h1>Row</h1> <br>
+    <button id ="addRow">+ row</button>
+    <button id ="deleteRow">- row</button> 
+    <h1>Color Operations</h1> <br>
+    <button id="colorPicker">PICK COLOR</button>
+    <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
+    <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
+    <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
 
     <div id="outTable">
       <table id="myTable">
@@ -19,15 +28,7 @@
         </tr>
       </table>
     </div>
-        <button onclick="addRow()"id = "addRow">ADD ROW</button>
-        <button  onclick="deleteRow()"id = "deleteRow">SUB ROW</button>
-        <button onclick="addColumn()"id="addColumn">ADD COLUMN</button>
-        <button onclick="deleteColumn()"id="deleteColumn">SUB COLUMN</button>
-        <button id="colorPicker">PICK COLOR</button>
-        <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
-        <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
-        <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
-
+        
   <script type="text/javascript" src="pixel.js"></script>
   </body>
 </html>
