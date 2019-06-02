@@ -1,45 +1,31 @@
-<!--
--->
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="google" content="notranslate">
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+  </head>
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" media="screen" href="index.css">
-
-    </head>
-
-    <body>
-        <header>
-        </header>
-
-        <button onclick="addRow()"id = "addRow">ADD ROW</button>
-        <button  onclick="deleteRow()"id = "deleteRow">SUB ROW</button>
-        <button onclick="addColumn()"id="addColumn">ADD COLUMN</button>
-        <button onclick="deleteColumn()"id="deleteColumn">SUB COLUMN</button>
+  <body>
+    <div id="buttonContainer"> 
+        <button id="addColumn">ADD COLUMN</button>
+        <button id="deleteColumn">DELETE COLUMN</button> 
+        <button id ="addRow">ADD ROW</button>
+        <button id ="deleteRow">DELETE ROW</button> 
         <button id="colorPicker">PICK COLOR</button>
         <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
         <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
         <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
-
-        <table id="myTable">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    <script type="text/javascript" src="pixel.js"></script>
-    </body>
+    </div>
+    
+    
+    <div id="outTable">
+      <table id="myTable">
+      </table>
+    </div>
+        
+  <script type="text/javascript" src="pixel.js"></script>
+  </body>
 </html>
