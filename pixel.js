@@ -27,11 +27,6 @@ document.getElementById('addColumn').addEventListener('click', function(){
 /* remove 1 column at the end of the table */
 document.getElementById('deleteColumn').addEventListener('click', function(){
   let rows = Array.from(document.getElementsByTagName('tr'));  
-  console.log("Delete column: ", rows[0] != undefined);
-  
-  // console.log("CELL DELETE", rows[0].deleteCell(0));
-  // console.log("ROWS ", rows[0]);
-
   if(rows[0].childElementCount > 0){
     for(let row of rows){
       row.deleteCell(0);
@@ -76,27 +71,26 @@ document.getElementById('deleteRow').addEventListener('click', function(){
  * */
 let beginDraw = () => {
   for(let cell of cells){
+    cell.addEventListener('mousedown',event => {
+      isDrawing = true;
+      console.log(cell);
+      console.log(cells.length);
+      modColor(cell,"#ffcf40");
+    });
 
-      cell.addEventListener('mousedown',event => {
-          isDrawing = true;
-          console.log(cell);
-          console.log(cells.length);
-          modColor(cell,"#ffcf40");
-      });
+    cell.addEventListener('mousemove',event => {
+      if(isDrawing){
+        modColor(cell,"#ffcf40");
+      }
+    });
 
-      cell.addEventListener('mousemove',event => {
-          if(isDrawing){
-              modColor(cell,"#ffcf40");
-          }
-      });
+    cell.addEventListener('mouseup',event => {
+      if(isDrawing){
+        isDrawing = false;
+      }
+    });
 
-      cell.addEventListener('mouseup',event => {
-          if(isDrawing){
-              isDrawing = false;
-          }
-      });
-
-      const allCells = document.getElementsByTagName('td');
+    const allCells = document.getElementsByTagName('td');
   }
 } 
 
