@@ -1,5 +1,4 @@
 td {
-    /*background-color: blue;*/
     width: 40px;
     height: 40px;
     margin: 0;
@@ -29,10 +28,14 @@ button {
 button:hover {
     background-color: rgb(195, 182, 212);
     color: black;
-} */
+} 
 
+#buttonContainer {
+    margin: 50px;
+}
 #outTable {
-    text-align: center;
+    /* text-align: center; */
+    display: inline-flexbox;
 }
 
 #myTable {
@@ -42,6 +45,8 @@ button:hover {
 
 body {
     /* background-color: darkblue; */
-    background-color: #51ff00;
+    text-align: center;
+    /* background-color: #51ff00; */
+    background-image: url("white.jpg");
 
 }
