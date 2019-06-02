@@ -11,6 +11,12 @@ let modColor = (loc,clr) => {
     loc.style.backgroundColor = clr;
 }
 
+/* helper to grab current color value */
+let allColorHelper = () => {
+    //get current color
+    allColor("#adcfe6");
+}
+
 /* change color of all cells based on input */
 let allColor = (clr) => {
     for(let cell of cells){
@@ -18,25 +24,45 @@ let allColor = (clr) => {
     }
 }
 
+/* helper to grab current color value */
+let remColorHelper = () => {
+    //get current color
+    remColor("#FFC0CB");
+}
+
+/* change color of all cells based on input */
+let remColor = (clr) => {
+    for(let cell of cells){
+        if(cell.style.backgroundColor == "gainsboro"){
+            console.log("true");
+            modColor(cell,clr);
+        }
+    }
+}
+
 /* Table Expansion and Contraction Functions */
 
 /* add 1 column at the end of the table */
-document.getElementById('addColumn').addEventListener('click', function(){
-    let rows = document.getElementsByTagName('tr');
-    for(let row of rows){
-        let newCol = document.createElement("td");
-        row.appendChild(newCol);
-    }
-    //console.log(cells);
-});
+let addColumn = () => {
+    //document.getElementById('addColumn').addEventListener('click', function(){
+        let rows = document.getElementsByTagName('tr');
+        for(let row of rows){
+            let newCol = document.createElement("td");
+            row.appendChild(newCol);
+        }
+        //console.log(cells);
+    //});
+}
 
 /* remove 1 column at the front of the table */
-document.getElementById('subtractColumn').addEventListener('click', function(){
-    let columns = document.getElementsByTagName('tr');
-    for(let row of columns){
-        row.removeChild(row.firstChild);
-    }
-});
+let deleteColumn = () => {
+    //document.getElementById('deleteColumn').addEventListener('click', function(){
+        let columns = document.getElementsByTagName('tr');
+        for(let row of columns){
+            row.removeChild(row.firstChild);
+        }
+    //});
+}
 
 /* add 1 row at front of the table */
 let addRow = () => {
@@ -63,6 +89,7 @@ let deleteRow = () => {
 /* MAIN */
 
 let initCells = false;
+let initColor = false;
 let myColor   = "Yellow"; /* need to get current color from dropdown */
 let isDrawing = false;
 let i = 0;
@@ -82,12 +109,12 @@ for(let cell of cells){
         isDrawing = true;
         console.log(cell);
         console.log(cells.length);
-        modColor(cell,"Purple");
+        modColor(cell,"#ffcf40");
     });
 
     cell.addEventListener('mousemove',event => {
         if(isDrawing){
-            modColor(cell,"Purple");
+            modColor(cell,"#ffcf40");
         }
     });
 
@@ -99,21 +126,7 @@ for(let cell of cells){
 }
 
 /* clear color of all cells to default  */
-if(true === false){
-    allColor("gray");
+if(false === initColor){
+    allColor("gainsboro");
+    initColor = true;
 }
-
-/* clear color of all cells to default  */
-if(true === false){
-    allColor(myColor);
-}
-
-/* add 1 column to the end of the table
-if(true === false){
-    addColumn();
-}
-
-/* remove 1 column to the end of the table
-if(true === false){
-    removeColumn();
-}*/

@@ -14,11 +14,14 @@
         <header>
         </header>
 
-        <button onclick="addRow()"id = "addRow">R+</button>
-        <button  onclick="deleteRow()"id = "deleteRow">R-</button>
-        <table id="myTable">
-        <button id="addColumn">+ col</button>
-        <button id="subtractColumn">- col</button>     
+        <button onclick="addRow()"id = "addRow">ADD ROW</button>
+        <button  onclick="deleteRow()"id = "deleteRow">SUB ROW</button>
+        <button onclick="addColumn()"id="addColumn">ADD COLUMN</button>
+        <button onclick="deleteColumn()"id="deleteColumn">SUB COLUMN</button>
+        <button id="colorPicker">PICK COLOR</button>
+        <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
+        <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
+        <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
 
         <table id="myTable">
             <tr>
