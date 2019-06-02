@@ -71,9 +71,6 @@ let remColor = (clr,def) => {
 }
 
 
-
-
-
  /* clear color of all cells to default  */
 if(false === initColor){
   allColor("gainsboro");

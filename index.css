@@ -10,29 +10,32 @@ td {
     background-color: white;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-    /* background-color: #ddd; */
-    overflow: hidden;
+/* 
+#buttonContainer {
+    text-align: center;
 }
-
-/* Style the links inside the navigation bar */
-.topnav button {
-    float: right;
-    color: #7b26eb;
+/* Style buttons */
+/*.topnav*/ 
+button {
+    font-family: 'Dosis', sans-serif;
+    display: inline-block;
+    color: #2f990f;
     text-align: center;
     padding: 14px 16px;
-    width: 100px;
-    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
     text-decoration: none;
     font-size: 17px;
+    padding: 20px;
+    border-radius:50%;
+    border-style: groove;
 }
 
 /* Change the color of links on hover */
-.topnav button:hover {
+button:hover {
     background-color: rgb(195, 182, 212);
     color: black;
-}
+} */
 
 #outTable {
     text-align: center;
@@ -44,5 +47,7 @@ td {
 }
 
 body {
-    background-color: darkblue;
+    /* background-color: darkblue; */
+    background-color: #51ff00;
+
 }

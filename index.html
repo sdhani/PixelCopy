@@ -2,30 +2,26 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
   </head>
 
   <body>
-    <div class="topnav"> 
-   
+    <div id="buttonContainer"> 
+        <button id="addColumn">ADD COLUMN</button>
+        <button id="deleteColumn">REMOVE COLUMN</button> 
+        <button id ="addRow">ADD ROW</button>
+        <button id ="deleteRow">SUBTRACT ROW</button> 
+        <button id="colorPicker">PICK COLOR</button>
+        <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
+        <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
+        <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
     </div>
     
-    <h1>Column</h1> <br>
-    <button id="addColumn">+ col</button>
-    <button id="deleteColumn">- col</button> 
-    <h1>Row</h1> <br>
-    <button id ="addRow">+ row</button>
-    <button id ="deleteRow">- row</button> 
-    <h1>Color Operations</h1> <br>
-    <button id="colorPicker">PICK COLOR</button>
-    <button onclick="allColor('gainsboro')"id = "resetColor">RESET COLOR</button>
-    <button onclick="allColorHelper()"id = "fillColor">COLOR ALL</button>
-    <button onclick="remColorHelper()"id = "remColor">COLOR REMAINING</button>
-
+    
     <div id="outTable">
       <table id="myTable">
-        <tr>
-        </tr>
+        <tr></tr>
       </table>
     </div>
         
