@@ -10,7 +10,6 @@ DOM manipulation, and handling user events by recreating a pixel art editor.</p>
                  <a href="https://github.com/LawrenceCastillo">Lawrence Castillo</a>, 
                  <a href="https://github.com/ShainaLowenthal">Shaina Lowenthal</a></p>
 
-<p><strong>Instructions for running app</strong></p>
 <p>Languages:<br>
           HTML<br>
           CSS<br>
